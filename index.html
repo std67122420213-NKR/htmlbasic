@@ -11,10 +11,6 @@
             margin: auto;
             padding: 20px;
         }
-        th {
-            font-size: large;
-            font-weight: bold
-        }
         .submit-btn {
             margin-top: 15px;
             padding: 5px 15px;
@@ -24,15 +20,16 @@
 <body>
     <h1 style="text-align: center;">แบบสอบถาม</h1>
     <hr>
-    <form action="" class="bg">
-        
+    <form method="post" class="bg" novalidate>        
         <table align="center">
             <tr><td colspan="2" text-aligh="left"><b>ข้อมูลผู้ตอบแบบสอบถาม</b></td></tr>
             <tr>
-                <td><b>ชื่อ-นามสกุล</b></td> <td><input type="text" name="username"></td>
+                <td><label for="studentname"><b>ชื่อ-นามสกุล</b></label></td>
+                <td><input type="text" id="studentname" name="studentname"></td>
             </tr>
             <tr>
-                <td><b>รหัสนักศึกษา</b></td> <td><input type="text" name="userid"></td>
+                <td><label for="studentid"><b>รหัสนักศึกษา</b></label></td>
+                <td><input type="text" id="studentid" name="studentid"></td>
             </tr>
             <tr>
                 <td><b>เพศ</b></td>
@@ -61,14 +58,14 @@
                 </td>
             </tr>
             <tr>
-                <td colspan="2"><b>แม่สีที่ชื่อชอบ</b><br>
+                <td colspan="2"><b>แม่สีที่ชื่นชอบ</b><br>
                     <input type="checkbox" name="color3" value="สีแดง">สีแดง
                     <input type="checkbox" name="color3" value="สีเขียว">สีเขียว
                     <input type="checkbox" name="color3" value="สีน้ำเงิน">สีน้ำเงิน
                 </td>
             </tr>
             <tr>
-                <td colspan="2"><b>ผลไม้ที่ชอบ</b><br>
+                <td colspan="2"><b>ผลไม้ที่ชื่นชอบ</b><br>
                     <input type="checkbox" name="fruits" value="มะม่วง">มะม่วง
                     <input type="checkbox" name="fruits" value="น้อยหน่า">น้อยหน่า
                     <input type="checkbox" name="fruits" value="ทุเรียน">ทุเรียน<br>
@@ -78,7 +75,7 @@
                 </td>
             </tr>
             <tr>
-                <td colspan="2"><b>อาหารที่ชอบ</b><br>
+                <td colspan="2"><b>อาหารที่ชื่นชอบ</b><br>
                     <input type="checkbox" name="menu" value="ต้มยำกุ้ง">ต้มยำกุ้ง
                     <input type="checkbox" name="menu" value="ไข่เจียวหมูสับ">ไข่เจียวหมูสับ
                     <input type="checkbox" name="menu" value="แกงข่าไก่">แกงข่าไก่<br>
@@ -87,11 +84,11 @@
                     <input type="checkbox" name="menu" value="ราดหน้าหมี่กรอบ">ราดหน้าหมี่กรอบ
                 </td>
             </tr>
-            
+            <tr>
                 <td align="center" colspan="2"> 
                 <input type="submit" value="บันทึก">
                 </td>
-            
+            </tr>            
         </table>
     </form>
 </body>
